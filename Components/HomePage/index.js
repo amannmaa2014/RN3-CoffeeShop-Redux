@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { View } from "react-native";
 import { connect } from "react-redux";
-import AppContainer from "../../Navigation/index";
+import AppContainer from "../../Navigation";
 
 // NativeBase Components
-import { Container, Header } from "native-base";
+import { Container } from "native-base";
 
 // Style
 import styles from "./styles";
@@ -16,6 +16,7 @@ class HomePage extends Component {
   componentDidMount() {
     this.props.getCoffeeShops();
   }
+
   render() {
     return (
       <Container style={styles.transparent}>
@@ -25,6 +26,7 @@ class HomePage extends Component {
     );
   }
 }
+
 const mapDispatchToProps = dispatch => ({
   getCoffeeShops: () => dispatch(getCoffeeShops())
 });

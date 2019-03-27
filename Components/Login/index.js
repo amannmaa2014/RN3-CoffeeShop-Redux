@@ -56,7 +56,7 @@ class Login extends Component {
           <Button
             full
             success
-            onPress={() => this.props.navigation.replace("List")}
+            onPress={() => this.props.navigation.replace("Profile")}
           >
             <Text>Login</Text>
           </Button>
@@ -69,7 +69,7 @@ class Login extends Component {
           </Button>
         </List>
         <Body>
-          <Label style={{ color: "red", opacity: 0.6 }} />
+          <Label style={{ color: "white", opacity: 0.6 }} />
         </Body>
       </Content>
     );
