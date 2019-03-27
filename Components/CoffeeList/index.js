@@ -8,8 +8,14 @@ import coffeeshops from "./list";
 
 // Component
 import CoffeeItem from "./CoffeeItem";
+import CartButton from "../CartButton";
 
 class CoffeeList extends Component {
+  static navigationOptions = {
+    title: "CoffeeList",
+    headerLeft: null,
+    headerRight: <CartButton />
+  };
   render() {
     const { coffeeShops, loading } = this.props.coffeeReducer;
     let shops;
